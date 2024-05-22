@@ -1,5 +1,5 @@
 <template>
-<div>
+
 <div className="wrapper">
     <h1>Приложение о героях Rick and Morty</h1>
     <p>Посмотреть имя или статус персонажа {{ userInput == "" ? "Rick and Morty" : '"'+userInput+'"' }}</p>
@@ -9,8 +9,8 @@
     <button disabled v-else>Введите персонажа</button>
 
     <p className="error"> {{ error }}</p>
-
-    <div className="cards" v-if="info">
+</div>
+<div className="cards" v-if="info">
       <div v-for="character in info.results" :key="character.id">
 
       <div className="card-item">
@@ -25,8 +25,7 @@
 
       </div>
     </div>
-</div>
-</div>
+
 </template>
 
 <script>
@@ -65,7 +64,6 @@ export default {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 1200px;
-  height: 100vh;
   margin-top: 80px;
   margin-bottom: 20px;
 }
